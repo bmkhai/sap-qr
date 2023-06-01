@@ -1,0 +1,120 @@
+{
+    "id": "bmkhai",
+    "version": "1.0.1",
+    "name": "Qr Code Widget",
+    "description": "QR код для перехода по ссылке",
+    "newInstancePrefix": "QrCodeWidget",
+    "vendor": "Bulat Khairullin",
+    "eula": "",
+    "license": "",
+    "icon": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-bmkhai-sap-qr",
+            "url": "https://github.com/bmkhai/sap-qr/blob/main/QrCodeWidget.js", 
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "builder",
+            "tag": "com-bmkhai-sap-qr-builder",
+            "url": "https://github.com/bmkhai/sap-qr/blob/main/QrCodeWidget_Builder.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+        "size": {
+            "description": "QR Code Width x Height",
+            "type": "integer",
+            "default": 150
+        },
+        "data": {
+            "description": "Data for QR Code",
+            "type": "string",
+            "default": "http:\/\/youtube.com"
+        },
+        "color": {
+            "description": "QR Code Foreground Color",
+            "type": "string",
+            "default": "000"
+        },
+        "bgcolor": {
+            "description": "QR Code Background Color",
+            "type": "string",
+            "default": "fff"
+        }
+    },
+    "methods": {
+        "setSize": {
+            "description": "Set QR Code Width x Height",
+            "parameters": [
+                {
+                    "name": "size",
+                    "type": "integer",
+                    "description": "height and width size"
+                }
+            ],
+            "body": "this.size = size;"
+        },
+        "getSize": {
+            "returnType": "integer",
+            "description": "Return QR Code Width x Height",
+            "body": "return this.size;"
+        },
+        "setData": {
+            "description": "Set Data for QR Code",
+            "parameters": [
+                {
+                    "name": "data",
+                    "type": "string",
+                    "description": "url, text anything"
+                }
+            ],
+            "body": "this.data = data;"
+        },
+        "getData": {
+            "returnType": "string",
+            "description": "Return Data for QR Code",
+            "body": "return this.data;"
+        },
+        "setColor": {
+            "description": "Set QR Code Foreground Color",
+            "parameters": [
+                {
+                    "name": "color",
+                    "type": "string",
+                    "description": "hex color code, without #"
+                }
+            ],
+            "body": "this.color = color;"
+        },
+        "getColor": {
+            "returnType": "string",
+            "description": "Return QR Code Foreground Color",
+            "body": "return this.color;"
+        },
+        "setBgcolor": {
+            "description": "Set QR Code Background Color",
+            "parameters": [
+                {
+                    "name": "bgcolor",
+                    "type": "string",
+                    "description": "hex color code, without #"
+                }
+            ],
+            "body": "this.bgcolor = bgcolor;"
+        },
+        "getBgcolor": {
+            "returnType": "string",
+            "description": "Return QR Code Background Color",
+            "body": "return this.bgcolor;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
+    }
+}

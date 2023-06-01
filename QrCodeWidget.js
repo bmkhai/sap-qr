@@ -54,5 +54,5 @@
     }
   }
 
-  customElements.define("com-bmkhai-sap-qr-builder", Widget);
+  customElements.define("com-bmkhai-sap-qr", Widget);
 })();
